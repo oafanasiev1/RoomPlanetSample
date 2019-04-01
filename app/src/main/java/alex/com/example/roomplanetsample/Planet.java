@@ -14,11 +14,11 @@ public class Planet {
     @PrimaryKey
     @NonNull
     @ColumnInfo(name = "planet_id")
-    private Long _id;        // database record id
+    private String _id;        // database record id
     private String name;        // planet name
     private double gravity;      // gravity value on this planet's surface
 
-    public Planet(Long _id, String name, double gravity) {
+    public Planet(String _id, String name, double gravity) {
 
 
 
@@ -27,7 +27,7 @@ public class Planet {
         this.gravity = gravity;
     }
 
-    public Long get_id() {
+    public String get_id() {
         return _id;
     }
 

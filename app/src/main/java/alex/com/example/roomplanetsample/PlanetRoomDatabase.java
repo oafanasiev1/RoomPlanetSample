@@ -38,9 +38,9 @@ public abstract class PlanetRoomDatabase extends RoomDatabase {
         @Override
         protected Void doInBackground(final Void... params) {
             mDao.deleteAll();
-            Planet planet = new Planet(null, "Earth", 9.8);
+            Planet planet = new Planet("1", "Earth", 9.8);
             mDao.insert(planet);
-            planet = new Planet(null, "Mars", 14.8);
+            planet = new Planet("2", "Mars", 14.8);
             mDao.insert(planet);
             return null;
         }
