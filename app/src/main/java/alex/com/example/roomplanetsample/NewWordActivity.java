@@ -1,4 +1,4 @@
-package alex.com.example.roomplanetsample;
+package alex.com.example.roomwordsample;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -8,27 +8,27 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-public class NewPlanetActivity extends AppCompatActivity {
+public class NewWordActivity extends AppCompatActivity {
 
-    public static final String EXTRA_REPLY = "com.example.android.planetlistsql.REPLY";
+    public static final String EXTRA_REPLY = "com.example.android.wordlistsql.REPLY";
 
-    private EditText mEditPlanetView;
+    private EditText mEditWordView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_new_planet);
-        mEditPlanetView = findViewById(R.id.edit_planet);
+        setContentView(R.layout.activity_new_word);
+        mEditWordView = findViewById(R.id.edit_word);
 
         final Button button = findViewById(R.id.button_save);
         button.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
                 Intent replyIntent = new Intent();
-                if (TextUtils.isEmpty(mEditPlanetView.getText())) {
+                if (TextUtils.isEmpty(mEditWordView.getText())) {
                     setResult(RESULT_CANCELED, replyIntent);
                 } else {
-                    String planet = mEditPlanetView.getText().toString();
-                    replyIntent.putExtra(EXTRA_REPLY, planet);
+                    String word = mEditWordView.getText().toString();
+                    replyIntent.putExtra(EXTRA_REPLY, word);
                     setResult(RESULT_OK, replyIntent);
                 }
                 finish();

@@ -1,4 +1,4 @@
-package alex.com.example.roomplanetsample;
+package alex.com.example.roomwordsample;
 
 import org.junit.Test;
 

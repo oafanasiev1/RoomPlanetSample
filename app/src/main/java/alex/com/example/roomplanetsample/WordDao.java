@@ -8,16 +8,19 @@ import android.arch.persistence.room.Query;
 
 import java.util.List;
 
+import alex.com.example.roomplanetsample.Word;
+
 @Dao
-public interface PlanetDao {
+public interface WordDao {
 
     @Insert
-    void insert(Planet planet);
+    void insert(Word word);
 
-    @Query("DELETE FROM planet_table")
+    @Query("DELETE FROM word_table")
     void deleteAll();
 
-    @Query("SELECT * from planet_table ORDER BY planet_id ASC")
-    LiveData<List<Planet>> getAllPlanets();
+    @Query("SELECT * from word_table ORDER BY word_id ASC")
+    LiveData<List<Word>> getAllWords();
+
 
 }

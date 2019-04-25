@@ -1,4 +1,4 @@
-package alex.com.example.roomplanetsample;
+package alex.com.example.roomwordsample;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("alex.com.example.roomplanetsample", appContext.getPackageName());
+        assertEquals("alex.com.example.roomwordsample", appContext.getPackageName());
     }
 }
