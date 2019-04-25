@@ -1,19 +1,18 @@
-package alex.com.example.roomwordsample;
+package alex.com.example.roomplanetsample;
+
 
 import android.app.Application;
+
+
 import android.arch.lifecycle.LiveData;
-import android.database.sqlite.SQLiteCursor;
 import android.os.AsyncTask;
 
 import java.util.List;
 
-import alex.com.example.roomplanetsample.Word;
-import alex.com.example.roomplanetsample.WordRoomDatabase;
 
 class WordRepository {
 
-    private static final SQLiteCursor WordRoomDatabase = ;
-    private alex.com.example.roomwordsample.WordDao mWordDao;
+    private WordDao mWordDao;
     private LiveData<List<Word>> mAllWords;
 
     // Note that in order to unit test the WordRepository, you have to remove the Application
@@ -21,7 +20,7 @@ class WordRepository {
     // See the BasicSample in the android-architecture-components repository at
     // https://github.com/googlesamples
     WordRepository(Application application) {
-        alex.com.example.roomplanetsample.WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
+        WordRoomDatabase db = WordRoomDatabase.getDatabase(application);
         mWordDao = db.wordDao();
         mAllWords = mWordDao.getAllWords();
     }
@@ -41,9 +40,9 @@ class WordRepository {
 
     private static class insertAsyncTask extends AsyncTask<Word, Void, Void> {
 
-        private alex.com.example.roomwordsample.WordDao mAsyncTaskDao;
+        private WordDao mAsyncTaskDao;
 
-        insertAsyncTask(alex.com.example.roomwordsample.WordDao dao) {
+        insertAsyncTask(WordDao dao) {
             mAsyncTaskDao = dao;
         }
 

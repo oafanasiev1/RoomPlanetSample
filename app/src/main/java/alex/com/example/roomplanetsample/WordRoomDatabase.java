@@ -9,7 +9,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 
-import alex.com.example.roomwordsample.WordDao;
 
 /**
  * This is the backend. The database. This used to be done by the OpenHelper.

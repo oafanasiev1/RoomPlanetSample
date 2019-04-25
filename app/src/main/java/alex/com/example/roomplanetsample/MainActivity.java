@@ -20,7 +20,7 @@ import java.util.List;
 import alex.com.example.roomwordsample.NewWordActivity;
 import alex.com.example.roomwordsample.R;
 import alex.com.example.roomwordsample.WordListAdapter;
-import alex.com.example.roomwordsample.WordViewModel;
+import alex.com.example.roomwordsample.*;
 
 
 public class MainActivity extends AppCompatActivity {
